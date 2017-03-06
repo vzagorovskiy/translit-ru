@@ -50,7 +50,7 @@ class USA(object):
         u'\u0401': 'Ye', u'\u0451': 'yе',  # Ёё ye
     }
     # гласные
-    _EXCEPTIONS = [
+    _VOWELS = [
         u'\u0410', u'\u0430',  # Аа
         u'\u0415', u'\u0435',  # Ее ye
         u'\u0401', u'\u0451',  # Ёё ye
@@ -61,6 +61,8 @@ class USA(object):
         u'\u042d', u'\u044d',  # Ээ
         u'\u042e', u'\u044e',  # Юю
         u'\u042f', u'\u044f',  # Яя
+    ]
+    _SIGNS = [
         u'\u042a', u'\u044a',  # Ъ
         u'\u042c', u'\u044c',  # ь
     ]
@@ -68,11 +70,9 @@ class USA(object):
     def transliterate(self, text):
         converted_word = ''
         for index, char in enumerate(text):
-            if char in self._TRANSLIT_TABLE_EXCEPTIONS:
-                if index == 0 or text[index - 1] in self._EXCEPTIONS:
-                    transchar = self._TRANSLIT_TABLE_EXCEPTIONS[char]
-                else:
-                    transchar = self._TRANSLIT_TABLE[char]
+            if char in self._TRANSLIT_TABLE_EXCEPTIONS and (
+                            index == 0 or text[index - 1] in self._VOWELS + self._SIGNS):
+                transchar = self._TRANSLIT_TABLE_EXCEPTIONS[char]
             else:
                 if char in self._TRANSLIT_TABLE:
                     transchar = self._TRANSLIT_TABLE[char]
