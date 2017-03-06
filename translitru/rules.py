@@ -80,6 +80,3 @@ class USA(object):
                     transchar = char
             converted_word += transchar
         return converted_word
-
-
-

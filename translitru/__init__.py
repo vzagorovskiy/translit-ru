@@ -1,11 +1,12 @@
 from . import rules
 
-def transliterate(text,Rules=rules.USA):
+
+def transliterate(text, rule=rules.USA):
     """Transliterate text by rules.
 
     Args:
-        text: text.
-        rules: datetime of when the message occurred.
-            Defaults to USAEmbassyRules.
+        text: text for transliteration.
+        rule: Transliteration rule.
+            Defaults to rules.USA - U.S. Departament of State's rule.
     """
-    return Rules().transliterate(text)
+    return rule().transliterate(text)
