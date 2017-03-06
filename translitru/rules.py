@@ -68,7 +68,7 @@ class USA(object):
     ]
 
     def transliterate(self, text):
-        converted_word = ''
+        transliterated = ''
         for index, char in enumerate(text):
             if char in self._TRANSLIT_TABLE_EXCEPTIONS and (
                             index == 0 or text[index - 1] in self._VOWELS + self._SIGNS):
@@ -78,5 +78,5 @@ class USA(object):
                     transchar = self._TRANSLIT_TABLE[char]
                 else:
                     transchar = char
-            converted_word += transchar
-        return converted_word
+            transliterated += transchar
+        return transliterated
