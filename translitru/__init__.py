@@ -1,3 +1,6 @@
+"""Transliterate text by predefined rules
+
+"""
 from . import rules
 
 
