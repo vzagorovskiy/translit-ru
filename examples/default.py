@@ -2,7 +2,7 @@
 Demonstrate using default transliteartion rule
 """
 from translitru import transliterate
-import pangrams
+from examples import pangrams
 
 print("Default transliteration")
 print()

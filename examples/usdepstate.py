@@ -2,7 +2,7 @@
 Demonstrate using U.S. State Department's rules
 """
 from translitru import transliterate, rules
-import pangrams
+from examples import pangrams
 
 # demo system A
 print("U.S. State Department's rules")

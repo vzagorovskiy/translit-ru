@@ -1,8 +1,8 @@
 """
-Demonstrate using GOST 7.79—2000 (ISO 9:1995) System A
+Demonstrate using GOST 7.79—2000 (ISO 9:1995) System A and System B
 """
 from translitru import transliterate, rules
-import pangrams
+from examples import pangrams
 
 # demo system A
 print('System A')
