@@ -1,10 +1,12 @@
 """Transliterate text by predefined rules
 
 """
-from . import rules
+__version__ = '1.0'
+
+from .rules import *
 
 
-def transliterate(text, rule=rules.USA):
+def transliterate(text, rule=rules.GOST):
     """Transliterate text by rules.
 
     Args:

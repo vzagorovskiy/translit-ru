@@ -1,8 +1,8 @@
 """
 Demonstrate using U.S. State Department's rules
 """
-from translitru import transliterate, rules
 from examples import pangrams
+from translitru import transliterate, rules
 
 # demo system A
 print("U.S. State Department's rules")

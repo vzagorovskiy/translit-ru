@@ -1,8 +1,8 @@
 """
 Demonstrate using default transliteartion rule
 """
-from translitru import transliterate
 from examples import pangrams
+from translitru import transliterate
 
 print("Default transliteration")
 print()

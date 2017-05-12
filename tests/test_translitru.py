@@ -1,4 +1,5 @@
 import unittest
+
 from translitru import transliterate, rules
 
 
