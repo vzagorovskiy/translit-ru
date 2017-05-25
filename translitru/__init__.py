@@ -10,8 +10,8 @@ def transliterate(text, rule=rules.GOST):
     """Transliterate text by rules.
 
     Args:
-        text: text for transliteration.
-        rule: Transliteration rule.
-            Defaults to rules.USA - U.S. Departament of State's rule.
+        text: text for transliteration
+        rule: Transliteration rule
+            Defaults to rules.GOST
     """
     return rule().transliterate(text)
