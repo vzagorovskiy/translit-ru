@@ -4,7 +4,7 @@ from translitru import transliterate, rules
 
 
 class TestTranslit(unittest.TestCase):
-    """Unit test for translit rules 
+    """Unit test for transliteration rules 
     
     """
 
@@ -23,6 +23,10 @@ class TestTranslit(unittest.TestCase):
         txt_t = u"Zavershyon ezhegodny`j s``ezd e`rudirovanny`x shkol`nikov, mechtayushhix gluboko proniknut` v tajny` fizicheskix yavlenij i ximicheskix reakczij."
         self.assertEqual(transliterate(txt, rules.GOST_B), txt_t)
 
+    def test_telegram(self):
+        txt = u"Завершён ежегодный съезд эрудированных школьников, мечтающих глубоко проникнуть в тайны физических явлений и химических реакций."
+        txt_t = u"Zavershеn ejegodnyi sezd erudirovannyh shkolnikov, mechtaiuscih gluboko proniknut v tainy fizicheskih iavlenii i himicheskih reakcii."
+        self.assertEqual(transliterate(txt, rules.Telegram), txt_t)
 
 if __name__ == '__main__':
     unittest.main()
